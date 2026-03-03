@@ -8,7 +8,7 @@ import Skills from "./parts/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="md:ml-16">
       <Navbar />
       <Hero />
       <About />
