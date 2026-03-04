@@ -1,48 +1,53 @@
+import WareFeed from "../assets/projectScreenshots/Warefeed.jpg";
+import BasicWebPort from "../assets/projectScreenshots/Basic-Web-Port.png";
+import SkyCast from "../assets/projectScreenshots/SkyCast.png";
+import CataLog from "../assets/projectScreenshots/Cata-Log.png";
+import WhatToDo from "../assets/projectScreenshots/What-To-Do.png";
+
 const projects = [
   {
-    title: "Basic Website Portfolio",
+    title: "WareFeed",
     description:
-      "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel"],
-    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: ""
+      "An Artificial Intelligence-Base Management System for Bless Rice Mill. In Partial Fulfillment of the Requirements for the Degree of Bachelor of Science in Instrumentation and Control Engineering",
+    tech: ["Python", "Object Detection (Bounding Box)", "Raspberry Pi 5"],
+    demo: "https://www.youtube.com/watch?v=pA8ZL1sHOxg",
+    repo: "https://github.com/RenAmamiya0411/WareFeed",
+    thumbnail: WareFeed
   },
   {
     title: "Basic Website Portfolio",
     description:
       "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel"],
+    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel", "Git"],
     demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: ""
+    thumbnail: BasicWebPort
   },
   {
-    title: "Basic Website Portfolio",
-    description:
-      "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel"],
-    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: ""
+    title: "SkyCast",
+    description: "A Weather App made to practice working with APIs and to further improve my React and Git skills.",
+    tech: ["Git", "React", "RESTful API"],
+    demo: "https://skycast-weather-app-srhfalcon.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Weather-App",
+    thumbnail: SkyCast
   },
   {
-    title: "Basic Website Portfolio",
+    title: "CataLog",
     description:
-      "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel"],
+      "An Inventory Management System Web App made to practice my skills and knowledge on MERN tech stack and TailwindCSS.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
     demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: ""
+    repo: "https://github.com/RenAmamiya0411/Cata-Log-Inventory-Management-System-Web-App",
+    thumbnail: CataLog
   },
   {
-    title: "Basic Website Portfolio",
+    title: "What-To-Do",
     description:
       "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel"],
-    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: ""
+    tech: ["JWT Auth", "TypeScript", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
+    demo: "https://srhfalcon-what-to-do-app.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/What-To-Do-App",
+    thumbnail: WhatToDo
   }
 ];
 
