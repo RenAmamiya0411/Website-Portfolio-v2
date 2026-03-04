@@ -1,36 +1,56 @@
 import { Briefcase, Code, Mail, User } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const links = [
+    { href: "#about", icon: <User size={24} />, id: "about" },
+    { href: "#skills", icon: <Code size={24} />, id: "skills" },
+    { href: "#projects", icon: <Briefcase size={24} />, id: "projects" },
+    { href: "#contact", icon: <Mail size={24} />, id: "contact" }
+  ];
+
   return (
     <>
-      <nav className="hidden md:flex left-0 top-0 h-full w-16 bg-black flex-col items-center justify-center gap-8 z-50">
-        <a className="navbar-icons" href="#about">
-          <User size={24} />
-        </a>
-        <a className="navbar-icons" href="#skills">
-          <Code size={24} />
-        </a>
-        <a className="navbar-icons" href="#projects">
-          <Briefcase size={24} />
-        </a>
-        <a className="navbar-icons" href="#contact">
-          <Mail size={24} />
-        </a>
+      <nav className="hidden md:flex fixed left-0 top-0 h-full w-16 bg-black flex-col items-center justify-center gap-8 z-50">
+        {links.map(link => (
+          <a
+            className={`transition-colors ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
+            href={link.href}
+            key={link.id}
+          >
+            {link.icon}
+          </a>
+        ))}
       </nav>
 
       <nav className="md:hidden fixed bottom-0 left-0 w-full bg-black flex justify-around items-center py-4 z-50">
-        <a className="navbar-icons" href="#about">
-          <User size={24} />
-        </a>
-        <a className="navbar-icons" href="#skills">
-          <Code size={24} />
-        </a>
-        <a className="navbar-icons" href="#projects">
-          <Briefcase size={24} />
-        </a>
-        <a className="navbar-icons" href="#contacts">
-          <Mail size={24} />
-        </a>
+        {links.map(link => (
+          <a
+            className={`transition-colors ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
+            href={link.href}
+            key={link.id}
+          >
+            {link.icon}
+          </a>
+        ))}
       </nav>
     </>
   );

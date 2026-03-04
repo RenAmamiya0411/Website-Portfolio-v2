@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .navbar-icons {
-    @apply text-white hover:text-red-500 transition-colors;
-  }
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
