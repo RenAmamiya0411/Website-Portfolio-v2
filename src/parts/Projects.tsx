@@ -3,6 +3,8 @@ import BasicWebPortImg from "../assets/projectScreenshots/Basic-Web-Port.png";
 import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
 import CataLogImg from "../assets/projectScreenshots/Cata-Log.png";
 import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
+import Lightbox from "../utilities/Lightbox";
+import { useState } from "react";
 
 const projects = [
   {
@@ -52,6 +54,8 @@ const projects = [
 ];
 
 function Projects() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <section
       className="min-h-screen bg-black flex flex-col items-center justify-center text-white px-8 py-16 relative overflow-hidden"
@@ -73,8 +77,13 @@ function Projects() {
             className="border border-red-500 p-6 flex flex-col md:flex-row gap-6 hover:bg-red-500 hover:bg-opacity-10 relative hover:-translate-y-1 transition-all duration-300 group"
             key={project.title}
           >
-            <div className="absolute left-0 top-0 h-full w-1 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"/>
-            <img className="w-full md:w-48 h-32 object-cover" src={project.thumbnail} alt={project.title} />
+            <div className="absolute left-0 top-0 h-full w-1 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+            <img
+              className="w-full md:w-48 h-32 object-cover"
+              src={project.thumbnail}
+              alt={project.title}
+              onClick={() => setLightbox({ src: project.thumbnail, alt: project.title })}
+            />
             <div className="flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold text-red-500">{project.title}</h3>
@@ -99,6 +108,8 @@ function Projects() {
           </div>
         ))}
       </div>
+
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
     </section>
   );
 }
