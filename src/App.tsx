@@ -7,6 +7,7 @@ import Projects from "./parts/Projects";
 import Skills from "./parts/Skills";
 import FadeIn from "./utilities/FadeIn";
 import Preloader from "./utilities/Preloader";
+import Footer from "./parts/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +34,7 @@ function App() {
       <FadeIn>
         <Contact />
       </FadeIn>
+      <Footer />
     </div>
   );
 }
