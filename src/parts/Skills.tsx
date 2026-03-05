@@ -1,6 +1,9 @@
 function Skills() {
   const skills = [
-    { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vite", "Tailwind CSS"] },
+    {
+      category: "Frontend",
+      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vite", "Tailwind CSS"]
+    },
     { category: "Backend", items: ["Node.js", "Express", "RESTful API", "JWT Auth"] },
     { category: "Database", items: ["MongoDB", "MongoDB Atlas", "Mongoose"] },
     { category: "Tools", items: ["Axios", "Git/GitHub", "Vercel", "Render", "Postman"] },
