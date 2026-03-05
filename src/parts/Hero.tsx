@@ -23,8 +23,10 @@ function Hero() {
         setDisplayed(current.slice(0, displayed.length - 1));
       }, 50);
     } else if (isDeleting && displayed.length === 0) {
-      setIsDeleting(false);
-      setTitleIndex(prev => (prev + 1) % titles.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setTitleIndex(prev => (prev + 1) % titles.length);
+      }, 100);
     }
 
     return () => clearTimeout(timeout);
@@ -53,12 +55,21 @@ function Hero() {
             inventore nisi, debitis ab ad rerum aspernatur consequatur, nihil repellendus? A sequi hic itaque
             praesentium.
           </p>
-          <a
-            className="mt-4 px-6 py-3 bg-red-500 text-white font-bold hover:bg-red-600 transition-colors w-fit"
-            href="#projects"
-          >
-            View My Work
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a
+              className="px-6 py-3 bg-red-500 text-white font-bold hover:bg-red-600 transition-colors w-fit"
+              href="#projects"
+            >
+              View My Work
+            </a>
+            <a
+              className="px-6 py-3 border border-red-500 text-red-500 font-bold hover:bg-red-500 hover:text-white transition-colors"
+              href="/testCV.pdf"
+              download
+            >
+              Download CV
+            </a>
+          </div>
         </div>
 
         <div className="border-2 border-red-500 p-1 flex-shrink-0">
