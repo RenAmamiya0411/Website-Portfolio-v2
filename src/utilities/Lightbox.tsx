@@ -25,7 +25,7 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
           className="absolute -top-10 right-8 text-white hover:text-red-500 transition-colors font-bold text-xl"
           onClick={onClose}
         >
-          ESC
+          ESC (X)
         </button>
         <img className="w-full object-contain border border-red-500" src={src} alt={alt} />
       </div>

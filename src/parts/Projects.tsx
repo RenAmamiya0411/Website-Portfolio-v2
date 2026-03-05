@@ -79,7 +79,7 @@ function Projects() {
           >
             <div className="absolute left-0 top-0 h-full w-1 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
             <img
-              className="w-full md:w-48 h-32 object-cover"
+              className="w-full md:w-48 h-32 object-cover cursor-pointer"
               src={project.thumbnail}
               alt={project.title}
               onClick={() => setLightbox({ src: project.thumbnail, alt: project.title })}
