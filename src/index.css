@@ -16,7 +16,8 @@ html {
   scroll-behavior: smooth;
 }
 
-#hero {
+#hero,
+#about {
   background-color: black;
   background-image: radial-gradient(circle, #ff000040 1px, transparent 1px);
   background-size: 30px 30px;
