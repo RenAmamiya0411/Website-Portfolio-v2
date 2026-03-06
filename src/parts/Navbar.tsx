@@ -1,5 +1,6 @@
 import { Briefcase, Code, Mail, User } from "lucide-react";
 import { useEffect, useState } from "react";
+import Logo from "../assets/logos/Logo-Light-Version.png";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -30,6 +31,7 @@ function Navbar() {
   return (
     <>
       <nav className="hidden md:flex fixed left-0 top-0 h-full w-16 bg-black flex-col items-center justify-center gap-8 z-50">
+        <img className="absolute top-4 w-15 h-15 object-contain" src={Logo} alt="Logo" />
         {links.map(link => (
           <a
             className={`transition-colors ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
