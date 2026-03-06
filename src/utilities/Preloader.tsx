@@ -25,7 +25,7 @@ function Preloader({ onComplete }: { onComplete: () => void }) {
     >
       <div className="flex flex-col items-center gap-4">
         <img className="w-48 h-48 object-contain" src={Logo} alt="Logo" />
-        <h1 className="text-6xl font-bold text-white">JOKER</h1>
+        <h1 className="text-6xl font-bold text-white">STEVEN FALCON</h1>
         <div className="w-48 h-1 bg-gray-800 overflow-hidden">
           <div className="h-full bg-red-500 animate-[loading_2s_ease-in-out_forwards]" />
         </div>

@@ -45,15 +45,14 @@ function Hero() {
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl mx-auto z-10 gap-12">
         <div className="flex flex-col gap-4">
           <p className="text-red-500 font-bold tracking-widest uppercase text-sm">Hello, my name is</p>
-          <h1 className="text-6xl font-bold">Joker</h1>
+          <h1 className="text-6xl font-bold">Steven Ray Harvey C. Falcon</h1>
           <h2 className="text-2xl text-gray-400">
             {displayed}
             <span className="text-red-500 animate-pulse">|</span>
           </h2>
           <p className="text-gray-400 max-w-md mt-2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum sapiente esse quidem soluta optio quos
-            inventore nisi, debitis ab ad rerum aspernatur consequatur, nihil repellendus? A sequi hic itaque
-            praesentium.
+            Always wanted to be a web developer. Took an engineering detour, graduated, and came back to where it
+            started.
           </p>
           <div className="flex gap-4 mt-4">
             <a

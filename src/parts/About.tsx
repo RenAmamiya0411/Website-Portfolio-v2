@@ -1,8 +1,6 @@
 import Portrait from "../assets/portraits/portrait.png";
 
 function About() {
-
-
   return (
     <section className="min-h-screen bg-black flex flex-col items-center justify-center text-white px-8" id="about">
       <h2 className="text-4xl font-bold mb-8">
@@ -14,14 +12,14 @@ function About() {
         </div>
         <div className="flex flex-col gap-4 text-gray-400 text-lg leading-relaxed">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus similique maiores sit sint et asperiores
-            nisi est placeat neque officiis repudiandae, totam officia maxime consequatur odit amet quibusdam fugiat
-            non!
+            An Instrumentation and Control Engineering graduate with a growing passion for web development. Experienced
+            in building full-stack web applications using the MERN stack: MongoDB, Express, React, and Node.js. With
+            hands-on projects ranging from inventory management systems to AI-based object detection.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus similique maiores sit sint et asperiores
-            nisi est placeat neque officiis repudiandae, totam officia maxime consequatur odit amet quibusdam fugiat
-            non!
+            Skilled in TypeScript, Tailwind CSS, and deploying applications on Vercel and Render. My engineering
+            background strengthens my logical thinking and problem-solving approach to development. Actively improving
+            through hands-on practice and self-learning, eager to contribute to a development team.
           </p>
         </div>
       </div>
