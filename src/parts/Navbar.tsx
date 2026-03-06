@@ -1,4 +1,4 @@
-import { Briefcase, Code, Mail, User } from "lucide-react";
+import { Briefcase, ChevronUp, Code, Mail, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import Logo from "../assets/logos/Logo-Light-Version.png";
 
@@ -41,9 +41,14 @@ function Navbar() {
             {link.icon}
           </a>
         ))}
+
+        <a className="absolute bottom-4 text-white hover:text-red-500 transition-colors" href="#hero">
+          <ChevronUp size={24} />
+        </a>
       </nav>
 
       <nav className="md:hidden fixed bottom-0 left-0 w-full bg-black flex justify-around items-center py-4 z-50">
+        <img className="w-8 h-8 object-contain" src={Logo} alt="Logo" />
         {links.map(link => (
           <a
             className={`transition-colors ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
@@ -53,6 +58,9 @@ function Navbar() {
             {link.icon}
           </a>
         ))}
+        <a className="text-white hover:text-red-500 transition-colors" href="#hero">
+          <ChevronUp size={24} />
+        </a>
       </nav>
     </>
   );
