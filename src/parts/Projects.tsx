@@ -20,8 +20,7 @@ const projects = [
   },
   {
     title: "Basic Website Portfolio",
-    description:
-      "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
+    description: "A personal portfolio website built with React, showcasing projects and skills as a web developer.",
     tech: ["HTML", "CSS", "JavaScript", "React", "Vercel", "Git"],
     demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
