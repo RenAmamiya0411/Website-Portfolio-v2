@@ -45,8 +45,11 @@ function Navbar() {
           </a>
         ))}
 
-        <a className="absolute bottom-4 text-white hover:text-red-500 transition-colors" href="#hero">
+        <a className="absolute bottom-4 text-white hover:text-red-500 transition-colors group flex items-center" href="#hero">
           <ChevronUp size={24} />
+          <span className="absolute left-12 bg-black border border-red-500 text-white text-sm px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            Go to Top
+          </span>
         </a>
       </nav>
 
