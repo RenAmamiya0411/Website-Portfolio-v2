@@ -22,10 +22,10 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: "#about", icon: <User size={24} />, id: "about" },
-    { href: "#skills", icon: <Code size={24} />, id: "skills" },
-    { href: "#projects", icon: <Briefcase size={24} />, id: "projects" },
-    { href: "#contact", icon: <Mail size={24} />, id: "contact" }
+    { href: "#about", icon: <User size={24} />, id: "about", label: "About" },
+    { href: "#skills", icon: <Code size={24} />, id: "skills", label: "Skills" },
+    { href: "#projects", icon: <Briefcase size={24} />, id: "projects", label: "Projects" },
+    { href: "#contact", icon: <Mail size={24} />, id: "contact", label: "Contacts" }
   ];
 
   return (
@@ -34,11 +34,14 @@ function Navbar() {
         <img className="absolute top-4 w-15 h-15 object-contain" src={Logo} alt="Logo" />
         {links.map(link => (
           <a
-            className={`transition-colors ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
+            className={`transition-colors relative group flex items-center ${active === link.id ? "text-red-500" : "text-white hover:text-red-500"}`}
             href={link.href}
             key={link.id}
           >
             {link.icon}
+            <span className="absolute left-12 bg-black border border-red-500 text-white text-sm px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              {link.label}
+            </span>
           </a>
         ))}
 
