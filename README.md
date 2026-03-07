@@ -1,4 +1,4 @@
-# Personal Portfolio - Ren Amamiya
+# Personal Portfolio - Steven Falcon
 
 A personal portfolio website built to showcase my projects, skills, and background as a web developer.
 
