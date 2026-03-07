@@ -5,6 +5,8 @@ import CataLogImg from "../assets/projectScreenshots/Cata-Log.png";
 import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
 import Lightbox from "../utilities/Lightbox";
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 
 const projects = [
   {
@@ -38,7 +40,7 @@ const projects = [
     description:
       "An Inventory Management System Web App made to practice my skills and knowledge on MERN tech stack and TailwindCSS.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
-    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
+    demo: "https://cata-log-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Cata-Log-Inventory-Management-System-Web-App",
     thumbnail: CataLogImg
   },
@@ -97,10 +99,20 @@ function Projects() {
                 </div>
               </div>
               <div className="flex gap-4 mt-4">
-                <a className="text-red-500 hover:text-white transition-colors font-bold" href={project.demo}>
+                <a
+                  className="flex items-center gap-2 text-red-500 hover:text-white transition-colors font-bold"
+                  href={project.demo}
+                  target="_blank"
+                >
+                  <ExternalLink size={16} />
                   Live Demo
                 </a>
-                <a className="text-red-500 hover:text-white transition-colors font-bold" href={project.repo}>
+                <a
+                  className="flex items-center gap-2 text-red-500 hover:text-white transition-colors font-bold"
+                  href={project.repo}
+                  target="_blank"
+                >
+                  <SiGithub size={16} />
                   GitHub
                 </a>
               </div>
