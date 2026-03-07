@@ -12,7 +12,7 @@ const projects = [
   {
     title: "WareFeed",
     description:
-      "An Artificial Intelligence-Base Management System for Bless Rice Mill. In Partial Fulfillment of the Requirements for the Degree of Bachelor of Science in Instrumentation and Control Engineering",
+      "An AI-based management system built for a local rice mill. Detects rice sacks to automatically update inventory, and sends automated notifications and alerts via email.",
     tech: ["Python", "Object Detection (Bounding Box)", "Raspberry Pi 5"],
     demo: "https://www.youtube.com/watch?v=pA8ZL1sHOxg",
     repo: "https://github.com/RenAmamiya0411/WareFeed",
@@ -29,7 +29,8 @@ const projects = [
   },
   {
     title: "SkyCast",
-    description: "A Weather App made to practice working with APIs and to further improve my React and Git skills.",
+    description:
+      "A React weather app using the OpenWeatherMap API. Search any city for real-time weather, toggle between Celsius and Fahrenheit, and view recent searches.",
     tech: ["Git", "React", "RESTful API"],
     demo: "https://skycast-weather-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Weather-App",
@@ -38,7 +39,7 @@ const projects = [
   {
     title: "CataLog",
     description:
-      "An Inventory Management System Web App made to practice my skills and knowledge on MERN tech stack and TailwindCSS.",
+      "A full-stack inventory management web app built with the MERN stack, featuring full CRUD operations for managing products and categories.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
     demo: "https://cata-log-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Cata-Log-Inventory-Management-System-Web-App",
@@ -47,7 +48,7 @@ const projects = [
   {
     title: "What-To-Do",
     description:
-      "Creating a basic website portfolio for the purpose of testing out what I've learned so far in React & Git",
+      "A MERN stack app with TypeScript and JWT auth. Users manage private to-do lists with priority levels, due dates, overdue highlighting, and filtering.",
     tech: ["JWT Auth", "TypeScript", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
     demo: "https://srhfalcon-what-to-do-app.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/What-To-Do-App",

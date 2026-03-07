@@ -1,5 +1,6 @@
 import { SiGmail, SiGithub } from "react-icons/si";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
+import { ExternalLink } from "lucide-react";
 
 function Contact() {
   return (
@@ -27,6 +28,7 @@ function Contact() {
         >
           <SiGmail className="text-red-500 group-hover:text-white transition-colors" size={24} />
           <span className="text-gray-400 group-hover:text-white transition-colors">falconsteven25@gmail.com</span>
+          <ExternalLink className="text-gray-600 group-hover:text-white transition-colors" size={14} />
         </a>
         <a
           className="flex items-center gap-4 border border-red-500 px-6 py-4 hover:bg-red-500 group hover:translate-x-2 transition-all duration-300"
@@ -37,6 +39,7 @@ function Contact() {
           <span className="text-gray-400 group-hover:text-white transition-colors">
             https://github.com/RenAmamiya0411
           </span>
+          <ExternalLink className="text-gray-600 group-hover:text-white transition-colors" size={14} />
         </a>
         <a
           className="flex items-center gap-4 border border-red-500 px-6 py-4 hover:bg-red-500 group hover:translate-x-2 transition-all duration-300"
@@ -47,6 +50,7 @@ function Contact() {
           <span className="text-gray-400 group-hover:text-white transition-colors">
             https://www.linkedin.com/in/steven-ray-harvey-falcon-62479b35b/
           </span>
+          <ExternalLink className="text-gray-600 group-hover:text-white transition-colors" size={24} />
         </a>
         <a
           className="flex items-center gap-4 border border-red-500 px-6 py-4 hover:bg-red-500  group hover:translate-x-2 transition-all duration-300"
@@ -55,6 +59,7 @@ function Contact() {
         >
           <FaPhone className="text-red-500 group-hover:text-white transition-colors" size={24} />
           <span className="text-gray-400 group-hover:text-white transition-colors">+639295410786</span>
+          <ExternalLink className="text-gray-600 group-hover:text-white transition-colors" size={14} />
         </a>
       </div>
     </section>
