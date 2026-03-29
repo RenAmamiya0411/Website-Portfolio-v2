@@ -10,36 +10,10 @@ import { SiGithub } from "react-icons/si";
 
 const projects = [
   {
-    title: "WareFeed",
-    description:
-      "An AI-based management system built for a local rice mill. Detects rice sacks to automatically update inventory, and sends automated notifications and alerts via email.",
-    tech: ["Python", "Object Detection (Bounding Box)", "Raspberry Pi 5"],
-    demo: "https://www.youtube.com/watch?v=pA8ZL1sHOxg",
-    repo: "https://github.com/RenAmamiya0411/WareFeed",
-    thumbnail: WareFeedImg
-  },
-  {
-    title: "Basic Website Portfolio",
-    description: "A personal portfolio website built with React, showcasing projects and skills as a web developer.",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel", "Git"],
-    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
-    thumbnail: BasicWebPortImg
-  },
-  {
-    title: "SkyCast",
-    description:
-      "A React weather app using the OpenWeatherMap API. Search any city for real-time weather, toggle between Celsius and Fahrenheit, and view recent searches.",
-    tech: ["Git", "React", "RESTful API"],
-    demo: "https://skycast-weather-app-srhfalcon.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Weather-App",
-    thumbnail: SkyCastImg
-  },
-  {
     title: "CataLog",
     description:
-      "A full-stack inventory management web app built with the MERN stack, featuring full CRUD operations for managing products and categories.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Git"],
+      "A full-stack inventory management system built with the MERN stack. Features JWT authentication with role-based access control, a live dashboard with low stock alerts, search/filter/pagination, skeleton loading states, toast notifications, and a responsive dark UI with a mobile bottom navbar.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "Git"],
     demo: "https://cata-log-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Cata-Log-Inventory-Management-System-Web-App",
     thumbnail: CataLogImg
@@ -52,6 +26,32 @@ const projects = [
     demo: "https://srhfalcon-what-to-do-app.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/What-To-Do-App",
     thumbnail: WhatToDoImg
+  },
+  {
+    title: "SkyCast",
+    description:
+      "A React weather app using the OpenWeatherMap API. Search any city for real-time weather, toggle between Celsius and Fahrenheit, and view recent searches.",
+    tech: ["Git", "React", "RESTful API"],
+    demo: "https://skycast-weather-app-srhfalcon.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Weather-App",
+    thumbnail: SkyCastImg
+  },
+  {
+    title: "Basic Website Portfolio",
+    description: "A personal portfolio website built with React, showcasing projects and skills as a web developer.",
+    tech: ["HTML", "CSS", "JavaScript", "React", "Vercel", "Git"],
+    demo: "https://srhfalcon-basic-website-portfolio.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Website-Portfolio",
+    thumbnail: BasicWebPortImg
+  },
+  {
+    title: "WareFeed",
+    description:
+      "An AI-based management system built for a local rice mill. Detects rice sacks to automatically update inventory, and sends automated notifications and alerts via email.",
+    tech: ["Python", "Object Detection (Bounding Box)", "Raspberry Pi 5"],
+    demo: "https://www.youtube.com/watch?v=pA8ZL1sHOxg",
+    repo: "https://github.com/RenAmamiya0411/WareFeed",
+    thumbnail: WareFeedImg
   }
 ];
 
