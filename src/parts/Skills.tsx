@@ -2,10 +2,11 @@ function Skills() {
   const skills = [
     {
       category: "Frontend",
-      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vite", "Tailwind CSS"]
+      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"]
     },
-    { category: "Backend", items: ["Node.js", "Express", "RESTful API", "JWT Auth"] },
-    { category: "Database", items: ["MongoDB", "MongoDB Atlas", "Mongoose"] },
+    { category: "Backend", items: ["Node.js", "Express", "RESTful API", "Prisma"] },
+    { category: "Database", items: ["MongoDB", "PostgreSQL", "Mongoose"] },
+    { category: "Authentication", items: ["JWT Auth", "NextAuth.js"] },
     { category: "Tools", items: ["Axios", "Git/GitHub", "Vercel", "Render", "Postman"] },
     { category: "Other", items: ["Object Detection (Bounding Box)"] }
   ];
