@@ -3,12 +3,22 @@ import BasicWebPortImg from "../assets/projectScreenshots/Basic-Web-Port.png";
 import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
 import CataLogImg from "../assets/projectScreenshots/Cata-Log.png";
 import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
+import JobTrackerImg from "../assets/projectScreenshots/JobTracker.png";
 import Lightbox from "../utilities/Lightbox";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 const projects = [
+  {
+    title: "Job Tracker",
+    description:
+      "A full-stack job application tracker built to help developers manage their job search. Track applications, monitor status changes, and leverage AI tools to generate cover letters, improve resume bullets, and prepare for interviews.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth", "Groq"],
+    demo: "https://job-tracker-srhfalcon.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Job-Tracker",
+    thumbnail: JobTrackerImg
+  },
   {
     title: "CataLog",
     description:
