@@ -4,12 +4,22 @@ import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
 import CataLogImg from "../assets/projectScreenshots/Cata-Log.png";
 import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
 import JobTrackerImg from "../assets/projectScreenshots/JobTracker.png";
+import OnBoardImg from "../assets/projectScreenshots/OnBoard.png";
 import Lightbox from "../utilities/Lightbox";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 const projects = [
+  {
+    title: "OnBoard",
+    description:
+      "Real-time collaborative Kanban board built with MERN, Socket.io, and @dnd-kit. Features JWT auth, drag-and-drop with persistence, task priorities, due dates, global search, dark mode, and customizable display settings.",
+    tech: ["MERN", "Socket.io", "TypeScript", "@dnd-kit", "Tailwind CSS"],
+    demo: "https://on-board-app-srhfalcon.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/OnBoard-App",
+    thumbnail: OnBoardImg
+  },
   {
     title: "Job Tracker",
     description:
