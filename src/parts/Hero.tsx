@@ -1,37 +1,6 @@
-import { useEffect, useState } from "react";
 import GradPic from "../assets/portraits/gradPic.png";
 
-const titles = ["Full Stack Developer", "Frontend Developer", "Backend Developer"];
-
 function Hero() {
-  const [titleIndex, setTitleIndex] = useState(0);
-  const [displayed, setDisplayed] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = titles[titleIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!isDeleting && displayed.length < current.length) {
-      timeout = setTimeout(() => {
-        setDisplayed(current.slice(0, displayed.length + 1));
-      }, 100);
-    } else if (!isDeleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setIsDeleting(true), 1500);
-    } else if (isDeleting && displayed.length > 0) {
-      timeout = setTimeout(() => {
-        setDisplayed(current.slice(0, displayed.length - 1));
-      }, 50);
-    } else if (isDeleting && displayed.length === 0) {
-      timeout = setTimeout(() => {
-        setIsDeleting(false);
-        setTitleIndex(prev => (prev + 1) % titles.length);
-      }, 100);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayed, isDeleting, titleIndex]);
-
   return (
     <section
       className="h-screen bg-black flex flex-col items-center justify-center text-white px-8 md:px-16 relative overflow-hidden"
@@ -46,13 +15,10 @@ function Hero() {
         <div className="flex flex-col gap-4">
           <p className="text-red-500 font-bold tracking-widest uppercase text-sm">Hello, my name is</p>
           <h1 className="text-6xl font-bold">Steven Ray Harvey C. Falcon</h1>
-          <h2 className="text-2xl text-gray-400">
-            {displayed}
-            <span className="text-red-500 animate-pulse">|</span>
-          </h2>
+          <h2 className="text-2xl text-gray-400">MERN Full-Stack Developer</h2>
           <p className="text-gray-400 max-w-md mt-2">
-            Always wanted to be a web developer. Took an engineering detour, graduated, and came back to where it
-            started.
+            Instrumentation and Control Engineering graduate who builds full-stack web applications with the MERN stack.
+            My engineering background sharpens how I approach debugging and system design.
           </p>
           <div className="flex gap-4 mt-4">
             <a
