@@ -29,10 +29,10 @@ function Hero() {
             </a>
             <a
               className="px-6 py-3 border border-red-500 text-red-500 font-bold hover:bg-red-500 hover:text-white transition-colors"
-              href="/Steven-Falcon-Curriculum-Vitae.pdf"
+              href="/Steven-Falcon-Resume.pdf"
               download
             >
-              Download CV
+              Download Resume
             </a>
           </div>
         </div>
