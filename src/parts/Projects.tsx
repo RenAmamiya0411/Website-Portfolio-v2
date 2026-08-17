@@ -1,43 +1,58 @@
-import WareFeedImg from "../assets/projectScreenshots/Warefeed.jpg";
-import BasicWebPortImg from "../assets/projectScreenshots/Basic-Web-Port.png";
-import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
+import OnBoardImg from "../assets/projectScreenshots/OnBoard.png";
+import JobTrackerImg from "../assets/projectScreenshots/JobTracker.png";
 import CataLogImg from "../assets/projectScreenshots/Cata-Log.png";
 import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
-import JobTrackerImg from "../assets/projectScreenshots/JobTracker.png";
-import OnBoardImg from "../assets/projectScreenshots/OnBoard.png";
+import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
+import BasicWebPortImg from "../assets/projectScreenshots/Basic-Web-Port.png";
+import WareFeedImg from "../assets/projectScreenshots/Warefeed.jpg";
 import Lightbox from "../utilities/Lightbox";
+import FlagshipCard, { type FlagshipProject } from "./FlagshipCard";
+import CompactCard, { type OtherProject } from "./CompactCard";
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
-import { SiGithub } from "react-icons/si";
 
-const projects = [
+const flagshipProjects: FlagshipProject[] = [
   {
     title: "OnBoard",
-    description:
-      "Real-time collaborative Kanban board built with MERN, Socket.io, and @dnd-kit. Features JWT auth, drag-and-drop with persistence, task priorities, due dates, global search, dark mode, and customizable display settings.",
+    problem:
+      "Most to-do apps don't reflect how teams actually coordinate — task order and status need to update live across users, not on refresh.",
+    keyDecision:
+      "Used Socket.io alongside @dnd-kit so drag-and-drop reordering persists and syncs in real time across connected clients, rather than relying on polling or manual refresh.",
+    result:
+      "Deployed with production monitoring (UptimeRobot + a /health endpoint) and a seeded demo account so reviewers can try it without creating credentials.",
     tech: ["MERN", "Socket.io", "TypeScript", "@dnd-kit", "Tailwind CSS"],
     demo: "https://on-board-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/OnBoard-App",
     thumbnail: OnBoardImg
   },
   {
-    title: "Job Tracker",
-    description:
-      "A full-stack job application tracker built to help developers manage their job search. Track applications, monitor status changes, and leverage AI tools to generate cover letters, improve resume bullets, and prepare for interviews.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth", "Groq"],
-    demo: "https://job-tracker-srhfalcon.vercel.app/",
-    repo: "https://github.com/RenAmamiya0411/Job-Tracker",
-    thumbnail: JobTrackerImg
-  },
-  {
     title: "CataLog",
-    description:
-      "A full-stack inventory management system built with the MERN stack. Features JWT authentication with role-based access control, a live dashboard with low stock alerts, search/filter/pagination, skeleton loading states, toast notifications, and a responsive dark UI with a mobile bottom navbar.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "Git"],
+    problem:
+      "Small inventories are often tracked manually or in spreadsheets, with no real-time visibility into stock levels or who changed what.",
+    keyDecision:
+      "Implemented JWT auth with role-based access — regular workers can view inventory, only admins can make changes — to keep stock edits accountable.",
+    result:
+      "Rebuilt from a v1 with no auth at all into a v2 with full authentication, a live dashboard that auto-flags items below 5 units in stock, and search/filter/pagination for scaling past a handful of products.",
+    tech: ["MERN", "Tailwind CSS", "JWT"],
     demo: "https://cata-log-app-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Cata-Log-Inventory-Management-System-Web-App",
     thumbnail: CataLogImg
   },
+  {
+    title: "Job Tracker",
+    problem:
+      "Job applicants tracking many applications at once typically fall back on manual methods or spreadsheets, with no dedicated app for the job.",
+    keyDecision:
+      "Chose Groq for the AI features (interview prep, cover letters, resume bullet improvements) since it was free/cheap and the most accessible option at the time for a personal project with no revenue.",
+    result:
+      "Achieved a 100/100/100 Lighthouse score across all pages after a dedicated accessibility pass, with CI/CD via GitHub Actions currently in progress.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth", "Groq"],
+    demo: "https://job-tracker-srhfalcon.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Job-Tracker",
+    thumbnail: JobTrackerImg
+  }
+];
+
+const otherProjects: OtherProject[] = [
   {
     title: "What-To-Do",
     description:
@@ -78,6 +93,8 @@ const projects = [
 function Projects() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
+  const openLightbox = (src: string, alt: string) => setLightbox({ src, alt });
+
   return (
     <section
       className="min-h-screen bg-black flex flex-col items-center justify-center text-white px-8 py-16 relative overflow-hidden"
@@ -93,51 +110,20 @@ function Projects() {
       <h2 className="text-4xl font-bold mb-12 z-10">
         My <span className="text-red-500">Projects</span>
       </h2>
+
       <div className="flex flex-col gap-8 max-w-3xl w-full z-10">
-        {projects.map(project => (
-          <div
-            className="border border-red-500 p-6 flex flex-col md:flex-row gap-6 hover:bg-red-500 hover:bg-opacity-10 relative hover:-translate-y-1 transition-all duration-300 group"
-            key={project.title}
-          >
-            <div className="absolute left-0 top-0 h-full w-1 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
-            <img
-              className="w-full md:w-48 h-32 object-cover cursor-pointer"
-              src={project.thumbnail}
-              alt={project.title}
-              onClick={() => setLightbox({ src: project.thumbnail, alt: project.title })}
-            />
-            <div className="flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-red-500">{project.title}</h3>
-                <p className="text-gray-400 mt-2">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {project.tech.map(t => (
-                    <span className="border border-red-500 text-gray-400 py-1 px-2 text-sm" key={t}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex gap-4 mt-4">
-                <a
-                  className="flex items-center gap-2 text-red-500 hover:text-white transition-colors font-bold"
-                  href={project.demo}
-                  target="_blank"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-                <a
-                  className="flex items-center gap-2 text-red-500 hover:text-white transition-colors font-bold"
-                  href={project.repo}
-                  target="_blank"
-                >
-                  <SiGithub size={16} />
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
+        {flagshipProjects.map(project => (
+          <FlagshipCard key={project.title} project={project} onImageClick={openLightbox} />
+        ))}
+      </div>
+
+      <h3 className="text-2xl font-bold mt-16 mb-8 z-10 text-gray-400">
+        Other <span className="text-red-500">Projects</span>
+      </h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl w-full z-10">
+        {otherProjects.map(project => (
+          <CompactCard key={project.title} project={project} onImageClick={openLightbox} />
         ))}
       </div>
 
