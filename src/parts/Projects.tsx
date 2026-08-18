@@ -5,6 +5,7 @@ import WhatToDoImg from "../assets/projectScreenshots/What-To-Do.png";
 import SkyCastImg from "../assets/projectScreenshots/SkyCast.png";
 import BasicWebPortImg from "../assets/projectScreenshots/Basic-Web-Port.png";
 import WareFeedImg from "../assets/projectScreenshots/Warefeed.jpg";
+import TaskManagerImg from "../assets/projectScreenshots/TaskManager.png";
 import Lightbox from "../utilities/Lightbox";
 import FlagshipCard, { type FlagshipProject } from "./FlagshipCard";
 import CompactCard, { type OtherProject } from "./CompactCard";
@@ -49,6 +50,18 @@ const flagshipProjects: FlagshipProject[] = [
     demo: "https://job-tracker-srhfalcon.vercel.app/",
     repo: "https://github.com/RenAmamiya0411/Job-Tracker",
     thumbnail: JobTrackerImg
+  },
+  {
+    title: "Task Manager",
+    problem:
+      "Given a fixed-deadline technical assessment for Mayan Solutions: build a full-stack task management app supporting task creation, management, and search.",
+    keyDecision:
+      "Prisma 7 defaulted to TypeScript syntax, incompatible with the project's JavaScript setup — downgraded to Prisma 6 to keep the stack consistent rather than losing time reworking the whole project to TypeScript under a deadline.",
+    result: "Submitted a day ahead of the deadline and advanced to the next round of the hiring process.",
+    tech: ["Vite", "React", "Express", "Node.js", "PostgreSQL", "Prisma"],
+    demo: "https://task-manager-nu-smoky.vercel.app/",
+    repo: "https://github.com/RenAmamiya0411/Task-Manager",
+    thumbnail: TaskManagerImg
   }
 ];
 
