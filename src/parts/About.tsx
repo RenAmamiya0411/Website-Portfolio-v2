@@ -12,14 +12,14 @@ function About() {
         </div>
         <div className="flex flex-col gap-4 text-gray-400 text-lg leading-relaxed">
           <p>
-            An Instrumentation and Control Engineering graduate with a growing passion for web development. Experienced
-            in building full-stack web applications using the MERN stack: MongoDB, Express, React, and Node.js. With
+            An Instrumentation and Control Engineering graduate with a focus on full-stack web development. Experienced
+            in building full-stack web applications using the MERN stack: MongoDB, Express, React, and Node.js, with
             hands-on projects ranging from inventory management systems to AI-based object detection.
           </p>
           <p>
             Skilled in TypeScript, Tailwind CSS, and deploying applications on Vercel and Render. My engineering
-            background strengthens my logical thinking and problem-solving approach to development. Actively improving
-            through hands-on practice and self-learning, eager to contribute to a development team.
+            background strengthens my logical thinking and problem-solving approach to development, and I continue
+            building and shipping projects to sharpen that edge further.
           </p>
         </div>
       </div>
