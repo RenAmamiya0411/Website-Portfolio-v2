@@ -8,7 +8,7 @@ function About() {
       </h2>
       <div className="flex flex-col md:flex-row items-center gap-12 max-w-4xl w-full">
         <div className="border-2 border-red-500 p-1 flex-shrink-0">
-          <img className="w-64 h-64 object-cover" src={Portrait} alt="Profile" />
+          <img className="w-64 h-64 object-cover" src={Portrait} alt="Steven Falcon" />
         </div>
         <div className="flex flex-col gap-4 text-gray-400 text-lg leading-relaxed">
           <p>

@@ -38,7 +38,7 @@ function Hero() {
         </div>
 
         <div className="border-2 border-red-500 p-1 flex-shrink-0">
-          <img className="w-64 h-64 object-cover" src={GradPic} alt="Profile" />
+          <img className="w-64 h-64 object-cover" src={GradPic} alt="Steven Falcon Graduation Picture" />
         </div>
       </div>
     </section>
