@@ -1,4 +1,5 @@
 import GradPic from "../assets/portraits/gradPic.png";
+import { SiGithub } from "react-icons/si";
 
 function Hero() {
   return (
@@ -35,6 +36,14 @@ function Hero() {
               Download Resume
             </a>
           </div>
+          <a
+            className="text-red-500 hover:text-white transition-colors"
+            href="https://github.com/RenAmamiya0411"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <SiGithub size={28} />
+          </a>
         </div>
 
         <div className="border-2 border-red-500 p-1 flex-shrink-0">
